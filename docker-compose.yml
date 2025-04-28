@@ -1,0 +1,17 @@
+
+services:
+  nats:
+    container_name: nats-main
+    image: nats
+    restart: always
+    ports:
+      - 4222:4222
+      - 6222:6222
+      - 8222:8222
+
+
+# Run a NATS server
+# Each server exposes multiple ports
+# 4222 is for clients.
+# 8222 is an HTTP management port for information reporting.
+# 6222 is a routing port for clustering.
